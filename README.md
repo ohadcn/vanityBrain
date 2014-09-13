@@ -51,7 +51,7 @@ electrum compatible address, starts with 1B or 1b:
 
 3 english words address, starts with 1B:
 
-	python vanityBrain.py B -n -l 3
+	$ python vanityBrain.py B -n -l 3
 	looking for addresses starting with 1b:
 	Opening dictionary file bip39.txt and validating encoding is utf-8
 	finished reading file bip39.txt, starting bruteforce...
