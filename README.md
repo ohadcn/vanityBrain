@@ -9,16 +9,6 @@ Want to have your money always with you? want a rememberable bitcoin account?
 
 This tool will help you get an address, that you and your friends can remember!
 
-known issues
-============
-A. make sure asked address has only base58 acceptable characters (123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz)
-
-B. estimate time for address generating and notify user of progress.
-
-C. coinkit passphrases seems not to be used by any software, posiible to remove that option?
-
-D. add hive algorythm.
-
 requirements
 ============
 This tool is written in python (v2), and depends on coinkit library.
@@ -58,3 +48,12 @@ electrum compatible address, starts with 1B or 1b:
 	your new key is: snap confirm height 
 	and your address is: 1BgNFpbntqfAEQCXLXjAskGHU8fhj13JWD
 
+known issues
+============
+A. make sure asked address has only base58 acceptable characters (123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz)
+
+B. estimate time for address generating and notify user of progress.
+
+C. coinkit passphrases seems not to be used by any software, posiible to remove that option?
+
+D. add hive algorythm.
