@@ -15,7 +15,23 @@ This tool is written in python (v2), and depends on coinkit library.
 
 usage
 =====
-python vanityBrain.py <vanity address starting> [args]
+	python vanityBrain.py <vanity address starting> [args]
+
+	A script to find vanity address with seed of a givven parameters.
+
+	positional arguments:
+		prefix       prefix of desired address, (not including the starting 1)
+
+	optional arguments:
+		-h, --help   show this help message and exit
+		-n           dont use electrum compatible search
+		-d DICTFILE  dictionary file to take passphrase from
+		-l LENGTH    length of desired passphrase
+		-t MAXTRIES  maximum number of tries
+		-i           case-insensitive vanity address search
+		--version    show program's version number and exit
+
+	in default, this script looks for 12 words electrum compatible seed
 
 examples
 ========
