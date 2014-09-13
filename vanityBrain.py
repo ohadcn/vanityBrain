@@ -47,7 +47,7 @@ def findVanity4OldElectrum(prefix,  maxTries = 0, ignoreCase = False):
 		addr = acc.create_new_address(False)
 		if ignoreCase:
 			if addr.lower().startswith(prefix):
-				return guess, addr
+				return ' '.join(guess), addr
 		else:
 			if addr.startswith(prefix):
 				return ' '.join(guess), addr
@@ -56,12 +56,12 @@ def findVanity4OldElectrum(prefix,  maxTries = 0, ignoreCase = False):
 
 def main():
 	argParser = ArgumentParser(description='A script to find vanity address with seed of a givven parameters.',
-								usage='python seed4vanity.py <vanity address starting> [args]',
+								usage='python vanityBrain.py <vanity address starting> [args]',
 								epilog='in default, this script looks for 12 words electrum compatible seed')
 	argParser.add_argument('prefix', action='store', nargs=1,
 							help='prefix of desired address, (not including the starting 1)')
 	argParser.add_argument('-n', action='store_false', dest='electrumOld', default=True,
-							help='dont use ')
+							help='dont use electrum compatible search')
 	argParser.add_argument('-d',  action='store', dest='dictFile', default='bip39.txt',
 							help='dictionary file to take passphrase from')
 	argParser.add_argument('-l', action='store', dest='length',type=int, default=12,
@@ -74,7 +74,7 @@ def main():
 	args= argParser.parse_args()
 	
 	basicConfig(level=INFO,
-						format='%(asctime)s %(levelname)-6s line %(lineno)-4s %(message)s')
+						format='%(message)s')
 
 	if(args.ignoreCase):
 		prefix='1'+''.join(args.prefix).lower()
